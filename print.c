@@ -20,8 +20,10 @@ int _printf(const char * const format, ...)
 			for (j = 0; p[j].name; j++)
 			{
 				if (format[i + 1] == *p[j].name)
+				{
 					l += p[j].f(ap);
 					break;
+				}
 			}
 			if (!p[j].name && format[i + 1] != '\0')
 			{
