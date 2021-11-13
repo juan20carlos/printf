@@ -5,15 +5,15 @@
 #include <stdlib.h>
 #include <limits.h>
 /**
- *
- *
- *
+ * struct my_printf - Nuestro printf
+ * @name: especificador de conversión
+ * @f: comprobar
  */
 typedef struct my_printf
 {
 	char *name;
 	int (*f)(va_list);
-}print_t;
+} print_t;
 
 int _printf(const char *format, ...);
 int print_char(va_list c);
@@ -31,7 +31,7 @@ static const print_t p[] = {
 	{"c", print_char},
 	{"s", print_str},
 	{"%", print_porc},
-	{NULL,NULL}
+	{NULL, NULL}
 	};
 
 #endif
