@@ -26,10 +26,13 @@ int print_chars(char *str);
 void rev_string(char *s);
 void print_number_flag(int n, int flag);
 int count_digit_base_flag(int i, int base, int flag);
-
+int print_dec(va_list d);
+int print_int(va_list i);
 static const print_t p[] = {
 	{"c", print_char},
 	{"s", print_str},
+	{"d", print_dec},
+	{"i", print_int},
 	{"%", print_porc},
 	{NULL, NULL}
 	};
